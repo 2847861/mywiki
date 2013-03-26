@@ -1,6 +1,11 @@
 mywiki
 ======
 
-assignment 2 without tests
+Assignment2 (with no tests)
 
-use first the command $pyhton manage.py syncdb and then $python manage.py runserver localhost:3000
+use first the command:
+$python manage.py syncdb 
+$python manage.py runserver localhost:3000
+
+Then it should works.
+First home page, with links to 3 other pages: History, Health and Characteristics
