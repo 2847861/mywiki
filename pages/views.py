@@ -13,5 +13,8 @@ def article1(request):
 def article2(request):
 	return render(request, 'pages/health.html')
 	
+def article3(request):
+	return render(request, 'pages/characteristics.html')
+	
 
 
