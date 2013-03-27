@@ -1,6 +1,6 @@
 <html>
 		<head>
-				<title>Home</title>
+				<title>{{page.title}}</title>
 <style>
 body
 {
@@ -61,14 +61,14 @@ font-size:15px;
 				
 		</head>
 		<div class="h1">
-		<h1>Cavalier King Charles</h1>
+		<h1>{{page.head}}</h1>
 		</div>
 		<div class="nav">
 		<nav>
-			<a href="/">Home</a> 
-			<br><a href="/History/">History</a> </br>
-			<a href="/Health/">Health</a> 
-			<a href="/Characteristics/">Characteristics</a> 
+			<a href="/">{{page.nav}}</a> 
+			<br><a href="/History/">{{nav.nav1}}</a> </br>
+			<a href="/Health/">{{nav.nav2}}</a> 
+			<a href="/Characteristics/">{{nav.nav3}}</a> 
 		</nav>
 		</div>
 		
@@ -76,22 +76,17 @@ font-size:15px;
 		<body>
 		<div class="body">
 		
-		<h2>Introduction</h2>
+		<h2>{{page.section}}</h2>
 		<br></br>
-		<p>Welcome to the Cavalier King Charles Wiki !</p>
-		<p> This wiki will present to you some aspect of this dog race.</p>
-		<p> Firstly we will start with the beginning, the history of the Cavalier King Charles.</p>
-		<p> My second article is about the health of this little dog which is very fragile.  </p>
-		<p> Finally my last article talks about the characteristics of the Cavalier King Charles. </p>
-		<p> Enjoy it !</p>
+		<p>{{page.content}}</p>
 		<ul>
-		<li><a href="/History">> History</a></li>
-		<li><a href="/Health">> Health</a></li>
-		<li><a href="/Characteristics">> Characteristics</a></li>
+		<li><a href="/History">> {{nav.nav1}}</a></li>
+		<li><a href="/Health">> {{nav.nav2}}</a></li>
+		<li><a href="/Characteristics">> {{nav.nav3}}</a></li>
 		</ul>
 		
 		<center>		
-		<img src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn1/561622_10151426683593835_1571369406_n.jpg">
+		<img src={{page.image}}>
 		</center>
 		</div>
 		</body>

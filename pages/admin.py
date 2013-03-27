@@ -1,12 +1,22 @@
 from django.contrib import admin
-from pages.models import Page, Choice
+from pages.models import Page, Navig, Img, Cont, Sect
 
-admin.site.register(Choice)
+class ChoiceInline(admin.StackedInline):
+    model = Navig, Img, Cont, Sect
+    extra = 5
+	
 class PageAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None,               {'fields': ['name']}),
+        (None,               {'fields': ['title']}),
         ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),
     ]
-    list_display = ('name', 'pub_date')
+    inlines = [ChoiceInline]
+    list_display = ('question', 'pub_date')	
+	
+admin.site.register(Navig)
+admin.site.register(Img)
+admin.site.register(Cont)
+admin.site.register(Sect)	
+admin.site.register(Page)
 
-admin.site.register(Page, PageAdmin)
+
